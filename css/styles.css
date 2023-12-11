@@ -401,6 +401,17 @@ header {
     transform: translateY(-100%);
 }
 
+@media (min-width: 445px) {
+    .art-design-left {
+        transform: translateY(-90%);
+    }
+
+    .art-design-left img {
+        max-width: 80%;
+        margin-inline: auto;
+    }
+}
+
 .art-design > * {
     padding: 0 1.75rem;
 }

@@ -363,6 +363,9 @@ header {
 
 
 /* main section styles */
+.sub-title--future-design {
+    text-align: center;
+}
 
 .wrapper {
     text-align: center;
@@ -492,6 +495,11 @@ footer {
  ########## */
 
 @media screen and (min-width: 950px) {
+
+    main {
+        overflow: hidden;
+    }
+
     header, .wrapper {
         padding: 3rem 6rem;
     }
@@ -502,6 +510,7 @@ footer {
         background-size: 180rem;
         background-position: 35% 50%;
         padding-top: 4rem;
+        margin-bottom: 0;
     }
 
 
@@ -577,4 +586,115 @@ footer {
     .hero-title {
         font-size: var(--fs-800);
     }
-} 
+
+    
+    /* main section styles */
+
+    .illustration-desktop {
+        display: block;
+    }
+
+    .illustration-mobile {
+        display: none;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .wrapper > * {
+        flex-basis: 100%;
+    }
+
+    .future-design {
+        flex-direction: row-reverse;
+        position: relative;
+        margin-top: 7rem;
+    }
+
+    
+    .sub-title--future-design {
+        font-size: var(--fs-700);
+        font-weight: var(--fw-400);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50%;
+    }
+
+    .future-design--left{
+        --scale: 125%;
+
+        scale: var(--scale);
+        translate: 20% 0;
+    }
+
+    .blogr-blog-desc {
+        width: 85%;
+        margin-top: 0 0 1rem;
+    }
+
+
+    /* art design section styles */
+
+    .art-design {
+        background: url(/images/bg-pattern-circles.svg), linear-gradient(150deg, var(--clr-body-gradient-very-dark-gray-blue), var(--clr-body-gradient-very-dark-desaturated-blue));
+        background-size: contain 50%;
+        background-position: -60% 80%;
+        background-repeat: no-repeat;
+        padding: 0 6rem;
+        margin-top: 10rem;  
+    }
+
+    .art-design-left {
+        position: initial;
+        scale: 135%;
+        translate: -10% 5%;
+    }
+
+    .art-design--blog {
+        width: 95%;
+    }
+
+
+    /* simple design section styles */
+
+    .simple-design {
+        margin: 10rem 0 12rem;
+    }
+
+    .simple-design--left {
+        --scale: 130%; 
+
+        translate: -40%;
+        scale: var(--scale);
+    }
+
+    /* footer section styles */
+
+    footer {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+
+    .footer-logo {
+        flex-basis: 20%;
+    }
+
+    .footer--navbar {
+        display: flex;
+        flex-basis: 80%;
+        gap: 10rem;
+        width: 100%;
+  }
+
+  .footer-dropdown--items > li > a:hover {
+    text-decoration: underline;
+  }
+
+}
